@@ -17,7 +17,7 @@ df = pd.DataFrame({
 
 fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
 
-app.layout = html.Div(children=[
+dash_app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
 
     html.Div(children='''
@@ -32,5 +32,4 @@ app.layout = html.Div(children=[
 
 if __name__ == '__main__':
     debug = False if os.environ.get("DASH_DEBUG_MODE") == "False" else True
-    app.run_server(debug=debug)
-    
+    dash_app.run_server(debug=debug)
