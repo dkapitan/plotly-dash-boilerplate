@@ -51,5 +51,8 @@ poetry install
 
 As a starting point, read up on the following examples:
 
-- [Deploying Dash on Azure](https://www.phillipsj.net/posts/deploying-dash-to-azure-app-service)
+- [Deploying Dash to Azure app service](https://www.phillipsj.net/posts/deploying-dash-to-azure-app-service)
+- [Deploying Dash apps on Azure](https://resonance-analytics.com/blog/deploying-dash-apps-on-azure)
 - [Azure Deployment models](https://stackify.com/azure-deployment-models/)
+
+NB: when deploying a Python app as code, you need to have a `app.py` or `application.py` in the root of your repository.

@@ -1,12 +1,11 @@
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
-
 import os
 from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
-app = Dash(__name__)
+
+dash_app = Dash(__name__)
+app = dash_app.server
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
@@ -33,4 +32,5 @@ app.layout = html.Div(children=[
 
 if __name__ == '__main__':
     debug = False if os.environ.get("DASH_DEBUG_MODE") == "False" else True
-    app.run_server(host="0.0.0.0", port=8050, debug=debug)
+    app.run_server(debug=debug)
+    
