@@ -4,7 +4,6 @@ This repository contains a boilerplate for Plotly Dash app in Docker container w
 
 - Using Debian Slim Docker image (read more [here](https://pythonspeed.com/articles/base-image-python-docker-images/))
 - Using poetry as package and environment manager for Python project
-  - To generate requirements.txt run `poetry export -f requirements.txt --output requirements.txt --without-hashes`
 - Using latest Dash, NumPy and pandas version on Python 3.9
 
 
@@ -14,7 +13,7 @@ This repository contains a boilerplate for Plotly Dash app in Docker container w
 ### Run
 ```sh
 poetry install
-poetry run python ./dash_on_azure/app.py
+poetry run python ./app.py
 ```
 
 ## Using Docker
@@ -22,7 +21,8 @@ poetry run python ./dash_on_azure/app.py
 ### Build and run
 
 ```sh
-docker build -t dash .
+poetry export -f requirements.txt --output requirements.txt --without-hashes
+docker build -t plotly-dash-boilerplate .
 
 docker run -p 8050:8050 \
 -v "$(pwd)"/app:/app \

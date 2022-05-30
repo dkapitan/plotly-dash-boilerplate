@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dash-on-azure"
+name = "plotly-dash-boilerplate"
 version = "0.1.0"
 description = ""
 authors = ["Daniel Kapitan <daniel@kapitan.net>"]
@@ -10,6 +10,7 @@ dash = "^2.4.1"
 plotly = "^5.8.0"
 pandas = "^1.4.2"
 numpy = "^1.22.4"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
